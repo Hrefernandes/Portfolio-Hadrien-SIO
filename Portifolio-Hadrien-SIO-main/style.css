@@ -1,0 +1,298 @@
+/* font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+  }
+
+  body{
+    height: 100vh;
+    background: #212529;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 50px;
+
+
+  }
+
+  .navbar h2{
+    color: #ffb742;
+    font-weight: 600;
+  }
+
+  .navbar ul{
+    display: flex;
+
+  }
+
+  .navbar ul li{
+    list-style: none;
+    
+  }
+
+  .navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 35px;
+  }
+
+  .navbar ul li:hover a{
+    color:#ffb742;
+  }
+
+  .navbar button{
+    background: #ffb742;
+    padding: 6px 3px;
+    border: none; 
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .navbar button:hover{
+    background: #fb8c00;
+  }
+
+  .mainAcceuil{
+    height: 640px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainAcceuil img{
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+
+  .mainAcceuil p{
+    font-size: 16px;
+    color: #ccc;
+    margin-top: 20px;
+  }
+  
+  .mainAcceuil h1{
+    font-size: 36px;
+    color: #fff;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  .mainAcceuil h4{
+    font-size: 29px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .mainAcceuil span{
+    color:#ffb742 ;
+    text-decoration: underline;
+  }
+
+  .logo-certif img{
+    height: 120px;
+    width: 120px;
+  }
+
+  .logo-certif{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .logo-pgCertif img{
+    height: 170px;
+    width: 170px;
+    margin-right: 56px;
+  }
+
+  .logo-pgCertif{
+    margin-top: 100px;
+    margin-left: 30px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .title-Certif{
+    font-size: 29px;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-top: 125px;
+  }
+
+  .banner-HTML img{
+    height: 200px;
+    width: 300px;
+  }
+ 
+  .banner-HTML{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .banner-HTML p{
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: #ccc;
+    font-size: 24px;
+  }
+
+  .banner-l2-HTML{
+    display: flex;
+    flex-direction:row ;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  /* .banner-l2-HTML img{
+    height: 500px;
+    width: 900px;
+    margin-right: 20px;
+  } */
+
+  .banner-l2-HTML ul {
+    margin-left: 30px;
+    margin-right: 30px;
+    border: solid white 1px;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+
+  .banner-l2-HTML ol {
+    margin-left: 30px;
+    margin-right: 30px;
+    border: solid white 1px;
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
+  .banner-l2-HTML label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em ;
+    color: white;
+    font-size: 34px;
+  }
+
+  .banner-l2-HTML ul li{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    color: #fff;
+    font-size: 18 px;
+
+  }
+
+  .banner-l2-HTML ol li{
+    margin-top: 40px;
+    color: #fff;
+    font-size: 18 px;
+
+  }
+
+  .banner-GSB{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .banner-GSB h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 670px;
+    color: #ccc;
+    font-size: 34px;
+  }
+
+  .banner-GSB img{
+    height: 150px;
+    width: 150px;
+    margin-left: 55px;
+  }
+
+  .banner-objectif-GSB ul label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: #ccc;
+    font-size: 34px;
+    text-decoration: underline;
+  }
+
+  .banner-objectif-GSB ul li{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .banner-objectif-GSB{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 60px;
+  }
+
+  .banner-presentation-GSB{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+  }
+
+  .h4-{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: #ccc;
+    font-size: 34px;
+    text-decoration: underline;
+  }
+
+  .banner-presentation-GSB img{
+    height: 700px;
+    width: 1000px;
+    margin-left: 30px;
+  }
+
+  .banner-presentation-GSB p{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: #fff;
+    font-size: 24px;
+  }
