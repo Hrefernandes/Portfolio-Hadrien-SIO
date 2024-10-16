@@ -97,7 +97,13 @@
     font-weight: 600;
   }
 
-  .mainAcceuil span{
+  .mainAcceuil span {
+    padding-left: 3px;
+    color: #ffb742;
+    text-decoration: underline;
+  }
+
+  span{
     color:#ffb742 ;
     text-decoration: underline;
   }
@@ -221,7 +227,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 670px;
+    margin-left: 500px;
     color: #ccc;
     font-size: 34px;
   }
@@ -268,7 +274,20 @@
     margin-top: 60px;
   }
 
-  .h4-{
+  .banner-presentation-GSB h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: #ccc;
+    font-size: 34px;
+    text-decoration: underline;
+  }
+
+  h4{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -282,8 +301,8 @@
   }
 
   .banner-presentation-GSB img{
-    height: 700px;
-    width: 1000px;
+    height: 600px;
+    width: 800px;
     margin-left: 30px;
   }
 
@@ -295,4 +314,24 @@
     margin-right: 150px;
     color: #fff;
     font-size: 24px;
+  }
+
+  .banner-Presentation-Certif {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+  }
+
+  .banner-Presentation-Certif p {
+    margin-top: 70px;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .banner-Presentation-Certif img {
+    height: 500px;
+    width: 800px;
+    margin-left: 30px;
   }
