@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <title>Projet HME</title>
+  </head>
+  <body>
+    <!-- Ma Navbar css : lignes 19 - 62 -->
+    <div class="navbar">
+      <h2>Portfolio Sio</h2>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../Certifications/certif-main.html">Certifications</a></li>
+        <li><a href="projet-main.html">Projets</a></li>
+      </ul>
+      <div>
+        <a
+          href="../Documents/CV_HadrienFernandes.pdf"
+          download="CV_HadrienFernandes.pdf"
+          class="nav-CV"
+        >
+          📄 CV
+        </a>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img src="../Images/HME/projet-hme-logo.png" alt="logo-GSB" />
+      <h4>Projet HME</h4>
+    </div>
+
+    <div class="banner-objectif">
+      <h2>Objectifs et Missions</h2>
+      <ul>
+        <label>Mission du Projet</label>
+        <li>Refonte complète du site vitrine HME France</li>
+        <li>Intégration d’une gestion des données internes</li>
+        <li>Développement d’un espace administrateur</li>
+        <li>Création d’une carte interactive des partenaires</li>
+        <li>Optimisation et sécurisation des accès</li>
+        <li>Automatisation de la gestion des articles et menus</li>
+      </ul>
+      <ul>
+        <li><strong>Chef de Projet :</strong> Cyril Fernandes</li>
+        <li><strong>Entreprise :</strong> HME France</li>
+        <li>
+          <strong>Technologies utilisées :</strong> HTML, CSS, PHP, JavaScript,
+          MySQL
+        </li>
+      </ul>
+    </div>
+
+    <div class="banner-presentation">
+      <img src="../Images/HME/hme-accueil.png" alt="Logo HME France" />
+      <p>
+        J’ai effectué mon stage chez HME France du 6 janvier au 14 février 2025.
+        Mon objectif était de refondre totalement le site internet de
+        l’entreprise pour améliorer son ergonomie et ajouter de nouvelles
+        fonctionnalités adaptées aux besoins internes.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img src="../Images/HME/hme-vitrine.png" alt="Aperçu du site vitrine" />
+      <p>
+        Mon projet principal a été la refonte du site
+        <strong>hmefrance.fr</strong>, anciennement sous CMS Joomla, en un site
+        entièrement développé en PHP avec une base de données MySQL pour une
+        meilleure gestion des contenus et utilisateurs.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/HME/hme-auth.png"
+        alt="Environnement de développement"
+      />
+      <p>
+        J’ai utilisé divers outils et technologies comme Apache, MySQL, HTML,
+        CSS et JavaScript. J’ai également mis en place des systèmes
+        d’authentification sécurisés et optimisé l’arborescence du site pour
+        améliorer la navigation.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img src="../Images/HME/hme-carte.png" alt="Carte interactive" />
+      <p>
+        Une des fonctionnalités majeures que j’ai développées est une
+        <strong>carte interactive</strong> permettant aux clients et partenaires
+        de localiser les points de distribution et d’afficher des informations
+        dynamiques en fonction des filtres appliqués.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img src="../Images/HME/hme-admin.png" alt="Interface administrateur" />
+      <p>
+        J’ai conçu un <strong>espace administrateur</strong> sécurisé permettant
+        aux gestionnaires de HME France d’ajouter, modifier et supprimer des
+        articles, des partenaires et des produits, sans intervention technique
+        sur la base de données.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img src="../Images/HME/HME-logo-long.jpg" alt="Compétences acquises" />
+      <p>Ce stage m’a permis d’acquérir et de renforcer des compétences en :</p>
+      <ul>
+        <li>Développement Full Stack (PHP, MySQL, JavaScript, CSS)</li>
+        <li>Création et gestion d’une base de données relationnelle</li>
+        <li>Optimisation de l’expérience utilisateur et responsive design</li>
+        <li>Gestion de projet et collaboration avec les équipes</li>
+        <li>Développement sécurisé et optimisation du référencement SEO</li>
+      </ul>
+    </div>
+
+    <div class="download-section">
+      <a
+        href="../Documents/Rapport de Stage 2nd Annee Hadrien Fernandes.pdf"
+        download="Rapport de Stage 2nd Annee Hadrien Fernandes.pdf"
+        class="download-btn"
+      >
+        📄 Télécharger le rapport de stage
+      </a>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <span class="close-btn">&times;</span>
+      <img id="overlay-img" src="" alt="Aperçu" />
+      <a id="visit-site-btn" href="https://hmefrance.fr" target="_blank"
+        >Visiter le site</a
+      >
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".banner-presentation img");
+        const overlay = document.getElementById("overlay");
+        const overlayImg = document.getElementById("overlay-img");
+        const visitSiteBtn = document.getElementById("visit-site-btn");
+        const closeBtn = document.querySelector(".close-btn");
+
+        images.forEach((img) => {
+          img.addEventListener("click", function () {
+            overlay.style.display = "flex";
+            overlayImg.src = this.src;
+            visitSiteBtn.href = "https://hmefrance.fr";
+          });
+        });
+
+        closeBtn.addEventListener("click", function () {
+          overlay.style.display = "none";
+        });
+
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) {
+            overlay.style.display = "none";
+          }
+        });
+      });
+    </script>
+
+    <footer>
+      <p>&#169 Hadrien Fernandes Portfolio - Tous droit Réservé</p> 
+    </footer>
+  </body>
+</html>

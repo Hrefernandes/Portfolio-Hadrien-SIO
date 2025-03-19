@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <title>Projet AXEL</title>
+  </head>
+  <body>
+    <!-- Ma Navbar css : lignes 19 - 62 -->
+    <div class="navbar">
+      <h2>Portfolio Sio</h2>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../Certifications/certif-main.html">Certifications</a></li>
+        <li><a href="projet-main.html">Projets</a></li>
+      </ul>
+      <div>
+        <a
+          href="../Documents/CV_HadrienFernandes.pdf"
+          download="CV_HadrienFernandes.pdf"
+          class="nav-CV"
+        >
+          📄 CV
+        </a>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img
+        src="../Images/Departement/projet-departement-logo.png"
+        alt="logo-GSB"
+      />
+      <h4>Projet AXEL</h4>
+    </div>
+
+    <div class="banner-objectif">
+      <h2>Objectifs et Missions</h2>
+      <ul>
+        <li>Utilisation et configuration d’ERP (Axelor)</li>
+        <li>
+          Développement en Java et gestion des bases de données (PostgreSQL)
+        </li>
+        <li>Lecture et traitement de fichiers XML et CSV</li>
+        <li>Gestion de projet et communication avec les équipes</li>
+        <li>Rédaction de documentations techniques</li>
+      </ul>
+      <ul>
+        <li><strong>Chef de l'équipe :</strong> Ophelie Ramon</li>
+        <li><strong>Tuteur :</strong> Fréderic Muraour</li>
+      </ul>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/Departement/locaux-departement.jpg"
+        alt="Conseil Départemental des Hauts-de-Seine"
+      />
+      <p>
+        J’ai effectué mon stage au Conseil Départemental des Hauts-De-Seine
+        (CD92) du 3 au 28 Juin 2024. Mon objectif était d’acquérir des
+        compétences en développement informatique et en gestion de projet au
+        sein d’une organisation publique.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/Departement/axelor-ordreMission.png"
+        alt="Interface Axelor"
+      />
+      <p>
+        Mon stage était centré sur le projet "Axel", une application basée sur
+        l'ERP Open Source <strong>Axelor</strong>. Cette solution permet
+        d’automatiser et d’optimiser la gestion des missions et des frais des
+        agents départementaux.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/Departement/axelor-BPM.png"
+        alt="Environnement de développement"
+      />
+      <p>
+        J’ai utilisé un environnement technique avancé comprenant : PostgreSQL
+        pour la base de données, Tomcat pour le serveur d’applications, et
+        Eclipse pour le développement en Java avec Axelor.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/Departement/axelor-listAccueil.png"
+        alt="Développement de fonctionnalités"
+      />
+      <p>
+        Durant mon stage, j’ai développé
+        <strong>9 fonctionnalités test</strong> et
+        <strong>3 applications fonctionnelles</strong>, ainsi qu’une application
+        finale intégrant des menus, modules et formulaires conformes aux
+        attentes de l’organisation.
+      </p>
+    </div>
+
+    <div class="download-section">
+      <a
+        href="../Documents/Rapport_Stage.pdf"
+        download="Rapport_Stage.pdf"
+        class="download-btn"
+      >
+        📄 Télécharger le rapport de stage
+      </a>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <span class="close-btn">&times;</span>
+      <img id="overlay-img" src="" alt="Aperçu" />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".banner-presentation img");
+        const overlay = document.getElementById("overlay");
+        const overlayImg = document.getElementById("overlay-img");
+        const closeBtn = document.querySelector(".close-btn");
+
+        images.forEach((img) => {
+          img.addEventListener("click", function () {
+            overlay.style.display = "flex";
+            overlayImg.src = this.src;
+          });
+        });
+
+        closeBtn.addEventListener("click", function () {
+          overlay.style.display = "none";
+        });
+
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) {
+            overlay.style.display = "none";
+          }
+        });
+      });
+    </script>
+    <footer>
+      <p>&#169 Hadrien Fernandes Portfolio - Tous droit Réservé</p> 
+    </footer>
+  </body>
+</html>

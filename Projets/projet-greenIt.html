@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <title>Veille Informatique</title>
+  </head>
+  <body>
+    <!-- Ma Navbar css : lignes 19 - 62 -->
+    <div class="navbar">
+      <h2>Portfolio Sio</h2>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../Certifications/certif-main.html">Certifications</a></li>
+        <li><a href="projet-main.html">Projets</a></li>
+      </ul>
+      <div>
+        <a
+          href="../Documents/CV_HadrienFernandes.pdf"
+          download="CV_HadrienFernandes.pdf"
+          class="nav-CV"
+        >
+          📄 CV
+        </a>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img src="../Images/Green It/projet-greenIt-logo.png" alt="logo-GSB" />
+      <h4>Veille Informatique</h4>
+    </div>
+
+    <div class="banner-objectif">
+      <h2>L'Impact Environnemental du Développement Logiciel</h2>
+      <ul>
+        <li>
+          Les centres de données consomment environ 1% de l’électricité
+          mondiale.
+        </li>
+        <li>
+          Un code non optimisé sollicite inutilement CPU et RAM, augmentant la
+          consommation énergétique.
+        </li>
+        <li>
+          Les services cloud génèrent des émissions de CO2 significatives.
+        </li>
+        <li>
+          Les requêtes serveur excessives et les fichiers lourds impactent la
+          performance et l’environnement.
+        </li>
+        <li>
+          Le <strong>Green IT</strong>, ou informatique verte, vise à réduire
+          l'empreinte environnementale du numérique. Cette veille explore son
+          impact, les bonnes pratiques et les outils permettant de développer
+          des logiciels plus écologiques.
+        </li>
+      </ul>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/Green IT/green-dev.jpg"
+        alt="Éco-conception logicielle"
+      />
+      <label>Bonnes Pratiques du Green IT pour les Développeurs</label>
+      <ul>
+        <li>
+          Utilisation de l’éco-conception logicielle pour réduire la complexité
+          des logiciels.
+        </li>
+        <li>
+          Optimisation du code : suppression des boucles inutiles, meilleure
+          gestion des requêtes SQL.
+        </li>
+        <li>
+          Compression des images et fichiers CSS/JS pour un chargement plus
+          rapide.
+        </li>
+        <li>Utilisation de frameworks légers et performants.</li>
+      </ul>
+    </div>
+
+    <div class="banner-presentation">
+      <img src="../Images/Green IT/green-serveur.png" alt="Outils Green IT" />
+      <label>Outils et Solutions pour un Développement Durable</label>
+      <ul>
+        <li>
+          <strong>GreenFrame :</strong> Analyse la consommation énergétique
+          d’une application.
+        </li>
+        <li>
+          <strong>Website Carbon Calculator :</strong> Évalue l’empreinte
+          carbone d’un site web.
+        </li>
+        <li>
+          <strong>CDN (Content Delivery Network) :</strong> Réduit la charge des
+          serveurs et optimise les requêtes.
+        </li>
+        <li>
+          <strong>Hébergement éco-responsable :</strong> Serveurs alimentés en
+          énergies renouvelables.
+        </li>
+      </ul>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/Green IT/green-ecosia.jpg"
+        alt="Entreprises engagées en Green IT"
+      />
+      <label>Exemples d’Entreprises et Initiatives</label>
+      <ul>
+        <li>
+          <strong>Mozilla :</strong> Optimisation de Firefox pour réduire
+          l’utilisation CPU.
+        </li>
+        <li>
+          <strong>Google :</strong> Centres de données fonctionnant aux énergies
+          renouvelables.
+        </li>
+        <li>
+          <strong>Ecosia :</strong> Moteur de recherche finançant la
+          reforestation.
+        </li>
+      </ul>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/Green IT/green-logo-long.jpg"
+        alt="Green IT logo long"
+      />
+      <label>Démarches Utilisées</label>
+      <ul>
+        <li>
+          Recherche d’articles spécialisés et rapports (GreenIT.fr, ADEME).
+        </li>
+        <li>
+          Utilisation de <strong>Google Alerts</strong> et
+          <strong>Feedly</strong> pour suivre l’actualité.
+        </li>
+        <li>Analyse des publications scientifiques et veille sur LinkedIn.</li>
+        <li>
+          Recherches basées sur les mots-clés : Green IT, éco-conception,
+          optimisation énergétique.
+        </li>
+      </ul>
+    </div>
+
+    <div class="download-section">
+      <a
+        href="../Documents/Veille Informatique - Green It - Hadrien Fernandes.pdf"
+        download="Veille Informatique - Green It - Hadrien Fernandes.pdf"
+        class="download-btn"
+      >
+        📄 Télécharger la veille informatique
+      </a>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <span class="close-btn">&times;</span>
+      <img id="overlay-img" src="" alt="Aperçu" />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".banner-presentation img");
+        const overlay = document.getElementById("overlay");
+        const overlayImg = document.getElementById("overlay-img");
+        const closeBtn = document.querySelector(".close-btn");
+
+        images.forEach((img) => {
+          img.addEventListener("click", function () {
+            overlay.style.display = "flex";
+            overlayImg.src = this.src;
+          });
+        });
+
+        closeBtn.addEventListener("click", function () {
+          overlay.style.display = "none";
+        });
+
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) {
+            overlay.style.display = "none";
+          }
+        });
+      });
+    </script>
+    <footer>
+      <p>&#169 Hadrien Fernandes Portfolio - Tous droit Réservé</p> 
+    </footer>
+  </body>
+</html>

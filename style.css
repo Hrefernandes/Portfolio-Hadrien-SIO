@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #212529;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 50px;
+}
+
+.navbar h2 {
+  color: #ffb742;
+  font-weight: 600;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  margin-right: 35px;
+}
+
+.navbar ul li:hover a {
+  color: #ffb742;
+}
+
+.navbar .nav-CV {
+  background: #ffb742;
+  padding: 6px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar .nav-CV:hover {
+  background: #fb8c00;
+}
+
+.mainAcceuil {
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainAcceuil img {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.mainAcceuil p {
+  font-size: 16px;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+.mainAcceuil h1 {
+  font-size: 36px;
+  color: #fff;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.mainAcceuil h4 {
+  font-size: 29px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.mainAcceuil span {
+  padding-left: 3px;
+  color: #ffb742;
+  text-decoration: underline;
+}
+
+span {
+  color: #ffb742;
+  text-decoration: underline;
+}
+
+.logo-certif {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  left: 25%;
+  width: 50%;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.logo-track {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.logo-certif img {
+  max-height: 120px;
+  max-width: 120px;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.logo-pgCertif img {
+  height: 170px;
+  width: 170px;
+  margin: 20px;
+}
+
+.logo-pgCertif {
+  margin-top: 100px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title-Certif {
+  font-size: 29px;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  margin-top: 125px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212529;
+  padding: 30px;
+  color: white;
+}
+
+.banner img {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.banner-objectif {
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner-objectif ul {
+  list-style: none;
+}
+
+.banner-objectif label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.banner-objectif ul li {
+  padding: 5px 0;
+}
+
+.banner-presentation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner-presentation img {
+  max-width: 500px;
+  max-height: 300px;
+  width: 100%;
+  height: 100%;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.banner-presentation p {
+  font-size: 16px;
+}
+
+.banner-certif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner-certif img {
+  max-width: 800px;
+  max-height: 300px;
+  width: 100%;
+  height: 100%;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 1000;
+}
+
+.overlay img {
+  max-width: 80%;
+  max-height: 70%;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+#visit-site-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ffb742;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+#visit-site-btn:hover {
+  background: #fb8c00;
+}
+
+.download-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: white;
+  background: #ffb742;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #fb8c00;
+}
+
+.carousel-container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  top: 10%;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel a {
+  flex: 0 0 25%;
+  text-align: center;
+}
+
+.carousel img {
+  width: 60%;
+  height: 80%;
+  border-radius: 10px;
+}
+
+.carousel-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.carousel-btn {
+  background-color: #ffb742;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

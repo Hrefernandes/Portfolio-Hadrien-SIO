@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <title>Projet GSB Frais</title>
+  </head>
+  <body>
+    <!-- Ma Navbar css : lignes 19 - 62 -->
+    <div class="navbar">
+      <h2>Portfolio Sio</h2>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../Certifications/certif-main.html">Certifications</a></li>
+        <li><a href="projet-main.html">Projets</a></li>
+      </ul>
+      <div>
+        <a
+          href="../Documents/CV_HadrienFernandes.pdf"
+          download="CV_HadrienFernandes.pdf"
+          class="nav-CV"
+        >
+          📄 CV
+        </a>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img src="../Images/GsbFrais/gsbfrais-logo.png" alt="logo-GSB Frais" />
+      <h4>Projet GSB Frais</h4>
+    </div>
+
+    <div class="banner-objectif">
+      <ul>
+        <label>Présentation de l’Application</label>
+        <li>
+          Application web de gestion des frais pour les visiteurs médicaux de
+          Galaxy Swiss Bourdin (GSB)
+        </li>
+        <li>Architecture MVC</li>
+        <li>Partiellement développée</li>
+      </ul>
+
+      <ul>
+        <label>Profils d’utilisateurs</label>
+        <li>Visiteur médical : démarchent les professionnels de santé</li>
+        <li>
+          Délégué régional : responsable des visiteurs médicaux d’une région
+        </li>
+        <li>Comptable</li>
+        <li>Administrateur du site (webmaster)</li>
+      </ul>
+
+      <ul>
+        <label>Concepts Clés</label>
+        <li>
+          Les visiteurs déclarent chaque mois leurs frais pour remboursement
+        </li>
+        <li>
+          Les fiches de frais comprennent des frais forfaitisés et hors forfait
+        </li>
+      </ul>
+
+      <ul>
+        <label>Fonctionnalités</label>
+        <li>
+          <span>Visiteurs médicaux :</span> Saisie et consultation des fiches de
+          frais
+        </li>
+        <li>
+          <span>Délégué régional :</span> Consultation des fiches de sa région
+        </li>
+        <li>
+          <span>Comptable :</span> Clôture et validation des fiches de frais
+        </li>
+      </ul>
+
+      <ul>
+        <label>Côté Technique</label>
+        <li>Programmation Orientée Objet</li>
+        <li>Gestion des exceptions et erreurs HTTP</li>
+        <li>Respect des normes PSR-1 et PSR-4</li>
+        <li>Utilisation de scripts et typage strict</li>
+      </ul>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/GsbFrais/gsbfrais-accueil.png"
+        alt="presentation gsbFrais brève"
+      />
+      <p>
+        GsbFrais est une application web permettant aux visiteurs médicaux de
+        gérer leurs frais professionnels et de se faire rembourser facilement.
+        Elle offre aussi des fonctionnalités pour les délégués régionaux, qui
+        supervisent les frais de leur équipe, et pour les comptables, qui
+        valident et clôturent les fiches de frais. L’application est encore en
+        développement et vise à simplifier la gestion des remboursements tout en
+        assurant un suivi clair et efficace des dépenses.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/GsbFrais/gsbfrais-fraisForfaitiser.png"
+        alt="frais forfaitisés"
+      />
+      <p>
+        Les frais forfaitisés incluent les frais kilométriques, nuitées d’hôtel,
+        forfaits étapes et repas au restaurant.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/GsbFrais/gsbfrais-fraisHorsForfait.png"
+        alt="frais hors forfait"
+      />
+      <p>
+        Les frais hors forfait concernent les dépenses réelles engagées comme la
+        location de véhicules, les invitations de praticiens, etc.
+      </p>
+    </div>
+
+    <div class="download-section">
+      <a
+        href="../Documents/GsbFrais-Cahier des charges.pdf"
+        download="GsbFrais des charges.pdf"
+        class="download-btn"
+      >
+        📄 Télécharger le cahier des charges
+      </a>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <span class="close-btn">&times;</span>
+      <img id="overlay-img" src="" alt="Aperçu" />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".banner-presentation img");
+        const overlay = document.getElementById("overlay");
+        const overlayImg = document.getElementById("overlay-img");
+        const closeBtn = document.querySelector(".close-btn");
+
+        images.forEach((img) => {
+          img.addEventListener("click", function () {
+            overlay.style.display = "flex";
+            overlayImg.src = this.src;
+          });
+        });
+
+        closeBtn.addEventListener("click", function () {
+          overlay.style.display = "none";
+        });
+
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) {
+            overlay.style.display = "none";
+          }
+        });
+      });
+    </script>
+
+<footer>
+  <p>&#169 Hadrien Fernandes Portfolio - Tous droit Réservé</p> 
+</footer>
+  </body>
+</html>

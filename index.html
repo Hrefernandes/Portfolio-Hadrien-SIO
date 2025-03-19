@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Portfolio - Hadrien Sio</title>
+  </head>
+
+  <body>
+    <!-- Ma Navbar css : lignes 19 - 62 -->
+    <div class="navbar">
+      <h2>Portfolio Sio</h2>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="Certifications/certif-main.html">Certifications</a></li>
+        <li><a href="Projets/projet-main.html">Projets</a></li>
+      </ul>
+      <div>
+        <a
+          href="Documents/CV_HadrienFernandes.pdf"
+          download="CV_HadrienFernandes.pdf"
+          class="nav-CV"
+        >
+          📄 CV
+        </a>
+      </div>
+    </div>
+
+    <!-- Corps de la page css : lignes 64 - 103 -->
+    <div class="mainAcceuil">
+      <h4>Bonjour, je suis <span>Hadrien Fernandes</span></h4>
+      <h1>Etudiant en 2nde année BTS SIO SLAM</h1>
+      <p>
+        Vous retouverez toutes mes formations et projets éffectuées durant mes
+        deux années de BTS ici
+      </p>
+      <img
+        class="PDPAcceuil"
+        src="Images/pdp-Og.png"
+        alt="img photo de profil"
+      />
+    </div>
+
+    <!-- icon de certif "populaire" -->
+    <div class="logo-certif">
+      <div class="logo-track">
+        <img src="Images/HTML/logo-html5.webp" alt="logo-html5" />
+        <img src="Images/HTML/css3.png" alt="logo-css" />
+        <img src="Images/PHP/php_logo.png" alt="logo-php" />
+        <img src="Images/HME/projet-hme-logo.png" alt="logo-hme" />
+        <img src="Images/Green IT/projet-greenIt-logo.png" alt="logo-greenIt" />
+        <img src="Images/GSB/projet-gsb-logo.png" alt="logo-gsb" />
+        <img src="Images/Symfony/symfony-logo.png" alt="logo-symfony" />
+        <img src="Images/Dotnet/dotnet-logo.png" alt="logo-dotnet" />
+        <img src="Images/Swift/swift-logo.png" alt="logo-swift" />
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const track = document.querySelector(".logo-track");
+        let speed = 1.5;
+
+        const logos = Array.from(track.children);
+        logos.forEach((logo) => {
+          let clone = logo.cloneNode(true);
+          track.appendChild(clone);
+        });
+
+        let position = 0;
+
+        function scrollLogos() {
+          position -= speed;
+          if (position <= -logos[0].offsetWidth - 20) {
+            position = 0;
+            track.appendChild(track.firstElementChild);
+          }
+          track.style.transform = `translateX(${position}px)`;
+          requestAnimationFrame(scrollLogos);
+        }
+
+        scrollLogos();
+      });
+    </script>
+
+    <footer>
+       <p>&#169 Hadrien Fernandes Portfolio - Tous droit Réservé</p> 
+    </footer>
+  </body>
+</html>

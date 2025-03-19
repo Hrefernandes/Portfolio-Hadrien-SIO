@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <title>Projet GsbCampagne</title>
+  </head>
+  <body>
+    <!-- Ma Navbar css : lignes 19 - 62 -->
+    <div class="navbar">
+      <h2>Portfolio Sio</h2>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../Certifications/certif-main.html">Certifications</a></li>
+        <li><a href="projet-main.html">Projets</a></li>
+      </ul>
+      <div>
+        <a
+          href="../Documents/CV_HadrienFernandes.pdf"
+          download="CV_HadrienFernandes.pdf"
+          class="nav-CV"
+        >
+          📄 CV
+        </a>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img
+        src="../Images/Dotnet/dotnet-logo.png"
+        alt="logo-GSB"
+      />
+      <h4>Projet Gsb Campagnes - Dotnet</h4>
+    </div>
+
+    <div class="banner-objectif">
+        <h2>Objectifs et Missions</h2>
+        <br>
+        <p>
+          En France, une liberté contrôlée est laissée aux laboratoires qui peuvent communiquer sur certains
+          de leurs produits tout en respectant des restrictions importantes. C’est pourquoi les laboratoires
+          pharmaceutiques centrent leur marketing sur la maladie et organisent des campagnes de sensibilisation.
+        </p>
+        <br>
+        <p>
+          Pour chaque campagne de sensibilisation, GSB organise des événements publics où des artistes réalisent
+          des œuvres en direct. Actuellement, le service Communication de GSB travaille sur une campagne nationale
+          de sensibilisation à l'achat de médicaments sur Internet.
+        </p>
+        <br>
+        <label>Compétences</label>
+        <ul>
+          <li>Développement d’une application de gestion des campagnes de sensibilisation.</li>
+          <li>Suivi financier des campagnes à moyen terme.</li>
+          <li>Application de bureau en architecture en couches.</li>
+          <li>Authentification et sécurité avec accès restreint.</li>
+        </ul>
+        <h2>Spécifications Techniques</h2>
+        <br>
+        <p>
+          L’application respectera l’architecture en couches (GUI, BLL, DAL, BO) et sera développée en C# avec
+          le Framework .NET. La base de données sera gérée par SQL Server avec des procédures stockées pour les opérations.
+        </p>
+      </div>
+      
+      <div class="banner-presentation">
+        <img src="../Images/Dotnet/accueil-Dotnet.png" alt="Accueil Dotnet">
+        <ul>
+          <li>Gestion des artistes et des agences.</li>
+          <li>Gestion des campagnes de sensibilisation.</li>
+          <li>Gestion des VIP et envoi d’invitations.</li>
+          <li>Gestion des événements et des participations d’artistes.</li>
+        </ul>
+      </div>
+
+      <div class="banner-presentation">
+        <img src="../Images/Dotnet/event-Dotnet.png" alt="Gestion des Evenements">
+        <ul>
+          <li>Gestion des événements</li>
+        </ul>
+      </div>
+      
+      <div class="banner-presentation">
+        <img src="../Images/Dotnet/MCD-GSBCampagne.png" alt="Dotnet MCD">
+        <ul>
+          <li>Dossier technique (MCD, diagrammes, architecture).</li>
+          <li>Plan de test et dossier de mise en production.</li>
+          <li>Documentation utilisateur et transfert de compétences.</li>
+        </ul>
+      </div>
+      
+
+    <div class="download-section">
+      <a
+        href="../Documents/Dotnet-Cahier des charges.pdf"
+        download="Dotnet-Cahier des charges.pdf"
+        class="download-btn"
+      >
+        📄 Télécharger le cahier des charges
+      </a>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <span class="close-btn">&times;</span>
+      <img id="overlay-img" src="" alt="Aperçu" />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".banner-presentation img");
+        const overlay = document.getElementById("overlay");
+        const overlayImg = document.getElementById("overlay-img");
+        const closeBtn = document.querySelector(".close-btn");
+
+        images.forEach((img) => {
+          img.addEventListener("click", function () {
+            overlay.style.display = "flex";
+            overlayImg.src = this.src;
+          });
+        });
+
+        closeBtn.addEventListener("click", function () {
+          overlay.style.display = "none";
+        });
+
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) {
+            overlay.style.display = "none";
+          }
+        });
+      });
+    </script>
+    <footer>
+      <p>&#169 Hadrien Fernandes Portfolio - Tous droit Réservé</p> 
+    </footer>
+  </body>
+</html>

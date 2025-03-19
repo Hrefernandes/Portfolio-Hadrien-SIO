@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <title>projet-main</title>
+  </head>
+
+  <body>
+    <!-- Ma Navbar css : lignes 19 - 62 -->
+    <div class="navbar">
+      <h2>Portfolio Sio</h2>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../Certifications/certif-main.html">Certifications</a></li>
+        <li><a href="../Projets/projet-main.html">Projets</a></li>
+      </ul>
+      <div>
+        <a
+          href="../Documents/CV_HadrienFernandes.pdf"
+          download="CV_HadrienFernandes.pdf"
+          class="nav-CV"
+        >
+          📄 CV
+        </a>
+      </div>
+    </div>
+
+    <h4 class="title-Certif">Mes projets :</h4>
+
+    <div class="carousel-container">
+      <div class="carousel">
+        <a href="projet-GSB.html"
+          ><img src="../Images/GSB/projet-gsb-logo.png" alt="logo-GSB"
+        /></a>
+        <a href="projet-HME.html"
+          ><img src="../Images/HME/projet-HME-logo.png" alt="logo-HME"
+        /></a>
+        <a href="projet-greenIt.html"
+          ><img
+            src="../Images/Green IT/projet-greenIt-logo.png"
+            alt="logo-Green IT"
+        /></a>
+        <a href="projet-AXEL.html"
+          ><img
+            src="../Images/Departement/projet-departement-logo.png"
+            alt="logo-Departement"
+        /></a>
+        <a href="projet-GsbFrais.html"
+          ><img src="../Images/GsbFrais/gsbfrais-logo.png" alt="logo-GsbFrais"
+        /></a>
+        <a href="projet-symfony.html"
+          ><img src="../Images/Symfony/symfony-logo.png" alt="logo-Symfony"
+        /></a>
+        <a href="projet-Dotnet.html"
+          ><img src="../Images/Dotnet/dotnet-logo.png" alt="logo-Dotnet"
+        /></a>
+      </div>
+
+      <div class="carousel-buttons">
+        <button id="prevBtn" class="carousel-btn">&#10094;</button>
+        <button id="nextBtn" class="carousel-btn">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="download-section">
+      <a
+        href="../Documents/Tableau de synthese -Hadrien Fernandes.pdf"
+        download="Tableau de synthese -Hadrien Fernandes.pdf"
+        class="download-btn"
+      >
+        📄 Tableau de synthese
+      </a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".carousel");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        let index = 0;
+        const visibleItems = 4;
+        const totalItems = document.querySelectorAll(".carousel a").length;
+        const maxIndex = Math.ceil(totalItems / visibleItems) - 1;
+
+        function updateCarousel() {
+          const translateX = -index * 100 + "%";
+          carousel.style.transform = `translateX(${translateX})`;
+
+          prevBtn.style.display = index === 0 ? "none" : "block";
+          nextBtn.style.display = index === maxIndex ? "none" : "block";
+        }
+
+        prevBtn.addEventListener("click", function () {
+          if (index > 0) {
+            index--;
+            updateCarousel();
+          }
+        });
+
+        nextBtn.addEventListener("click", function () {
+          if (index < maxIndex) {
+            index++;
+            updateCarousel();
+          }
+        });
+
+        updateCarousel();
+      });
+    </script>
+
+    <footer>
+      <p>&#169 Hadrien Fernandes Portfolio - Tous droit Réservé</p> 
+    </footer>
+  </body>
+</html>

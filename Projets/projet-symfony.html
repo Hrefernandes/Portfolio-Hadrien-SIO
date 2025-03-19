@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <title>Projet Symfony</title>
+  </head>
+  <body>
+    <!-- Ma Navbar css : lignes 19 - 62 -->
+    <div class="navbar">
+      <h2>Portfolio Sio</h2>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../Certifications/certif-main.html">Certifications</a></li>
+        <li><a href="projet-main.html">Projets</a></li>
+      </ul>
+      <div>
+        <a
+          href="../Documents/CV_HadrienFernandes.pdf"
+          download="CV_HadrienFernandes.pdf"
+          class="nav-CV"
+        >
+          📄 CV
+        </a>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img src="../Images/Symfony/symfony-logo.png" alt="logo-Symfony" />
+      <h4>Projet Symfonny</h4>
+    </div>
+
+    <div class="banner-objectif">
+      <ul>
+        <label>Présentation de l’Application</label>
+        <li>
+          Application web de gestion des relations avec les vétérinaires pour le
+          laboratoire GSB
+        </li>
+        <li>Architecture MVC</li>
+        <li>Partiellement développée</li>
+      </ul>
+
+      <ul>
+        <label>Profils d’utilisateurs</label>
+        <li>
+          Visiteur médical : chargé du suivi des vétérinaires et de la promotion
+          des produits vétérinaires
+        </li>
+        <li>
+          Manager : responsable de la gestion des produits et des vétérinaires
+        </li>
+        <li>
+          Administrateur : gestion complète des utilisateurs et des droits
+          d'accès
+        </li>
+      </ul>
+
+      <ul>
+        <label>Concepts Clés</label>
+        <li>Suivi régulier des vétérinaires pour répondre à leurs besoins</li>
+        <li>Fixation d'objectifs commerciaux sur les produits vétérinaires</li>
+        <li>Historisation des objectifs commerciaux sur plusieurs années</li>
+        <li>Catégories de vétérinaires et gestion de ces catégories</li>
+      </ul>
+
+      <ul>
+        <label>Fonctionnalités</label>
+        <li>
+          <span>Visiteurs médicaux :</span> Suivi des vétérinaires, promotion
+          des produits et fixation des objectifs commerciaux
+        </li>
+        <li>
+          <span>Manager :</span> Gestion des produits, objectifs et
+          vétérinaires, avec modification des données et consultation des
+          rapports
+        </li>
+        <li>
+          <span>Administrateur :</span> Gestion des utilisateurs, de leurs
+          rôles, et des permissions d'accès
+        </li>
+      </ul>
+
+      <ul>
+        <label>Objectifs commerciaux</label>
+        <li>
+          Historisation des objectifs commerciaux par vétérinaire et produit
+        </li>
+        <li>Possibilité de filtrer les objectifs par vétérinaire et année</li>
+        <li>Mise à jour régulière des objectifs avec gestion de l'année</li>
+      </ul>
+
+      <ul>
+        <label>Côté Technique</label>
+        <li>
+          Authentification Symfony avec rôles utilisateur (ROLE_USER,
+          ROLE_MANAGER, ROLE_ADMIN)
+        </li>
+        <li>Gestion de la sécurité des accès et de l'authentification</li>
+        <li>Respect des normes de développement web avec Symfony</li>
+        <li>Programmation orientée objet et gestion des exceptions</li>
+      </ul>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/Symfony/symfony-accueil.png"
+        alt="presentation gsbVeto brève"
+      />
+      <p>
+        GsbVeto est une application web dédiée à la gestion des relations avec
+        les vétérinaires. Elle permet aux visiteurs médicaux de suivre les
+        vétérinaires, de répondre à leurs besoins, de fixer des objectifs
+        commerciaux et de promouvoir les produits vétérinaires. L'application
+        offre également une gestion des utilisateurs, de leurs rôles et des
+        droits d'accès. Actuellement en développement, elle a pour objectif de
+        simplifier la gestion des relations avec les vétérinaires et d'améliorer
+        l'efficacité de la promotion des produits.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/Symfony/symfony-suivi.png"
+        alt="fonctionnalités de suivi"
+      />
+      <p>
+        L'application permet de suivre l'historique des relations avec chaque
+        vétérinaire, en enregistrant les détails de chaque contact, les
+        objectifs commerciaux et les produits associés.
+      </p>
+    </div>
+
+    <div class="banner-presentation">
+      <img
+        src="../Images/Symfony/symfony-objectif.png"
+        alt="fonctionnalités des objectifs"
+      />
+      <p>
+        L'application gère l'historisation des objectifs commerciaux sur
+        plusieurs années, avec possibilité de filtrer les données par
+        vétérinaire et année. Elle permet ainsi une meilleure analyse de
+        l'évolution du marché et des besoins des vétérinaires.
+      </p>
+    </div>
+
+    <div class="download-section">
+      <a
+        href="../Documents/Symfony-Cahier des charges.pdf"
+        download="Symfony des charges.pdf"
+        class="download-btn"
+      >
+        📄 Télécharger le cahier des charges
+      </a>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <span class="close-btn">&times;</span>
+      <img id="overlay-img" src="" alt="Aperçu" />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".banner-presentation img");
+        const overlay = document.getElementById("overlay");
+        const overlayImg = document.getElementById("overlay-img");
+        const closeBtn = document.querySelector(".close-btn");
+
+        images.forEach((img) => {
+          img.addEventListener("click", function () {
+            overlay.style.display = "flex";
+            overlayImg.src = this.src;
+          });
+        });
+
+        closeBtn.addEventListener("click", function () {
+          overlay.style.display = "none";
+        });
+
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) {
+            overlay.style.display = "none";
+          }
+        });
+      });
+    </script>
+
+<footer>
+  <p>&#169 Hadrien Fernandes Portfolio - Tous droit Réservé</p> 
+</footer>
+  </body>
+</html>
